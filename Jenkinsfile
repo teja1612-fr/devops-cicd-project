@@ -11,11 +11,6 @@ pipeline {
             }
         }
 		
-		stage('Deploy to tomcat') {
-            steps {
-                echo 'Deploying artifact to tomcat webserver '
-				deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://52.201.234.58:8091/')], contextPath: 'facebook-app', war: '**/*.war'
-            }
-        }
+		
     }
 }

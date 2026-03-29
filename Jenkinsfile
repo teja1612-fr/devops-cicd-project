@@ -22,7 +22,7 @@ pipeline {
                 echo 'Pushing Docker Image'
                 withCredentials([usernamePassword(credentialsId: 'docker-cred', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     sh '''
-echo $PASS | docker login -u $USER --password-stdin
+echo $PASS | docker login -u teja1612fr --password-stdin
 '''
                     sh 'docker push teja1612fr/devops-app'
                 }

@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('CLONE SCM') {
-            steps {
-                echo 'Cloning Mc-app project code'
-				git branch: 'main', url: 'https://github.com/teja1612-fr/devops-cicd-project.git'
-            }
-        }
+        
 		
 		stage('Build Artifact ') {
             steps {

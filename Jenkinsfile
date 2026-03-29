@@ -13,7 +13,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker Image'
-                sh 'docker build -t teja1612-fr/devops-app .'
+                sh 'docker build -t teja1612fr/devops-app .'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
                     sh '''
 echo $PASS | docker login -u $USER --password-stdin
 '''
-                    sh 'docker push teja1612-fr/devops-app'
+                    sh 'docker push teja1612fr/devops-app'
                 }
             }
         }
